@@ -3,14 +3,19 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import StarIcon from '@/assets/icons/star.svg';
 import bookImage from '@/assets/images/book-cover-2.jpg';
-import JavaScriptIcon from '@/assets/icons/square-js.svg';
-import HTMLIcon from '@/assets/icons/html5.svg';
-import CSSIcon from '@/assets/icons/css3.svg';
+import JavaScriptIcon from '@/assets/icons/js.svg';
+import HTMLIcon from '@/assets/icons/html-5.svg';
+import CSSIcon from '@/assets/icons/css.svg';
 import ReactIcon from '@/assets/icons/react.svg';
-import ChromeIcon from '@/assets/icons/chrome.svg';
 import GithubIcon from '@/assets/icons/github.svg';
+import NodeIcon from '@/assets/icons/node.svg';
+import MongoIcon from '@/assets/icons/mongo.svg';
+import JavaIcon from '@/assets/icons/java.svg';
+import SQLIcon from '@/assets/icons/sql.svg';
+import DockerIcon from '@/assets/icons/docker.svg';
+import KubIcon from '@/assets/icons/kubernetes.svg';
+import CIcon from '@/assets/icons/c++.svg';
 import mapImage from '@/assets/images/map.png';
-import { TechIcon } from "@/components/TechIcon";
 import Image from "next/image";
 import smileEmoji from '@/assets/images/memoji-smile.png';
 import { CardHeader } from "@/components/CardHeader";
@@ -20,20 +25,20 @@ import { useRef } from "react";
 
 const toolboxItems = [
   {
+    title: 'C++',
+    iconType: CIcon
+  },
+  {
     title: 'Javascript',
     iconType: JavaScriptIcon
   },
   {
-    title: 'HTML%',
+    title: 'HTML5',
     iconType: HTMLIcon
   },
   {
     title: 'CSS',
     iconType: CSSIcon
-  },
-  {
-    title: 'Chrome',
-    iconType: ChromeIcon
   },
   {
     title: 'Github',
@@ -43,26 +48,34 @@ const toolboxItems = [
     title: 'React.JS',
     iconType: ReactIcon
   },
-  // {
-  //   title: 'Express.JS',
-  //   icon: ''
-  // },
-  // {
-  //   title: 'MongoDB',
-  //   icon: ''
-  // },
-  // {
-  //   title: 'SQL',
-  //   icon: ''
-  // },
+  {
+    title: 'Node.JS',
+    iconType: NodeIcon
+  },
+  {
+    title: 'MongoDB',
+    iconType: MongoIcon
+  },
+  {
+    title: 'SQL',
+    iconType: SQLIcon
+  },
   // {
   //   title: 'C++',
-  //   icon: ''
+  //   iconType: ''
   // },
-  // {
-  //   title: 'JAVA',
-  //   icon: ''
-  // },
+  {
+    title: 'Java',
+    iconType: JavaIcon
+  },
+  {
+    title: 'Docker',
+    iconType: DockerIcon
+  },
+  {
+    title: 'Kubernetes',
+    iconType: KubIcon
+  },
 ]
 
 const hobbies = [
@@ -107,7 +120,7 @@ export const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className="py-20">
+    <div className="py-20" id="about">
       <div className="container">
         <SectionHeader title="A Glimpse Into My World" eyebrow="About Me" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, error?" />
         <div className="mt-20 flex flex-col gap-8">
